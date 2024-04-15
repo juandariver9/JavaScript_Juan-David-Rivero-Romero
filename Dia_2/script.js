@@ -1,3 +1,6 @@
+module.exports = require('./CampersCRUD');
+
+const CampersCRUD = require('./CampersCRUD');
 
 function limpiar_terminal() {
     console.clear();
@@ -5,14 +8,13 @@ function limpiar_terminal() {
 
 const x = prompt('Enter');
 
-console.log(`
+while (true) {
+    console.clear()
+    console.log(`
 **************************************************
 *                   Bienvenido                   *
 **************************************************
 `);
-
-while (true) {
-    
     console.log(`
     Cual es tu ROL en CAMPUSLANDS
     \n1. Coordinador\t 2. Trainer\t 3. Salir
@@ -52,7 +54,7 @@ while (true) {
                 if (decision_camper == 1) {
                     limpiar_terminal()
                     console.log("Inscribir Camper\n");
-                    // print(CampersCRUD.MainCamperAñadir())
+                    console.log(CampersCRUD.MainCamperAñadir());
                 }
                 else if (decision_camper == 2) {
                     limpiar_terminal()
