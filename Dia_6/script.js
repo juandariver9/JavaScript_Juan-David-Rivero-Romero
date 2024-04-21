@@ -196,3 +196,51 @@ triangle1.displayDetails();
 -          argument, and show how B and/or C must be changed to work with it.           -
 -----------------------------------------------------------------------------------------
 */
+
+class A {
+  constructor(arg) {
+    this.propiedadA = arg;
+  }
+  // Se define la clase A con un constructor que toma un argumento arg.
+  // Dentro del constructor, se asigna el valor de arg a la propiedad propiedadA del objeto actual (this).
+}
+
+class B extends A {
+  constructor(arg) {
+    super(arg);
+  }
+  // Se define la clase B que extiende de la clase A con extends A.
+  // El constructor de B toma un argumento arg.
+  // Se llama al constructor de la clase A usando super(arg), lo que inicializa la propiedad propiedadA en la instancia de B.
+}
+
+class C extends B {
+  constructor(arg) {
+    super(arg);
+  }
+  // Se define la clase C que extiende de la clase B con extends B.
+  // El constructor de C toma un argumento arg.
+  // Se llama al constructor de la clase B usando super(arg), lo que a su vez llama al constructor de la clase A y establece la propiedad propiedadA en la instancia de C.
+}
+
+const CC = new C("Hola");
+// Se crea una nueva instancia de la clase C con el argumento "Hola".
+// Se pasa "Hola" al constructor de C, que a su vez lo pasa al constructor de B, y luego al constructor de A, inicializando así la propiedad propiedadA en la instancia de C.
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+console.log(CC.propiedadA); 
+// Se imprime el valor de la propiedad propiedadA de la instancia CC, que en este caso es "Hola".
+
+
+/*
+-----------------------------------------------------------------------------------------
+---------------------------------------EJERCICIO 7---------------------------------------
+-  A Computer Science department keeps track of its CS students using some custom soft  -
+-  ware. Each student is represented by a Student object that features a pass() method  -
+-  that returns true if and only if the student has all six ticks to pass the year. The -
+-    department suddenly starts teaching NS students, who only need four ticks to pass. -
+-   Using inheritance and polymorphism, show how the software can continue to keep all  -
+-   Student objects in one list in code without having to change any classes other than -
+-                                       Student.                                        -
+-----------------------------------------------------------------------------------------
+*/
