@@ -95,7 +95,7 @@ function DisplayFilmsInfo(data) {
                 for (let i = 0; i < films.length; i++) {
                     filmsHtml += `<p> ${films[i]} </p>`;
                 }
-                filmInfo.innerHTML = `<p><b>Películas:</b></p>${filmsHtml}`;
+                filmInfo.innerHTML = `${filmsHtml}`;
             })
 
     }
@@ -157,7 +157,7 @@ function DisplayVehiclesInfo(data) {
                 for (let i = 0; i < vehicles.length; i++) {
                     vehiclesHtml += `<p> ${vehicles[i]} </p>`;
                 }
-                starshipsInfo.innerHTML = `<p><b>Vehiculos:</b></p>${vehiclesHtml}`;
+                starshipsInfo.innerHTML = `${vehiclesHtml}`;
             })
 
     }
@@ -189,7 +189,7 @@ function DisplayStarshipsInfo(data) {
                 for (let i = 0; i < starships.length; i++) {
                     starshipsHtml += `<p> ${starships[i]} </p>`;
                 }
-                starshipsInfo.innerHTML = `<p><b>Naves:</b></p>${starshipsHtml}`;
+                starshipsInfo.innerHTML = `${starshipsHtml}`;
             })
 
     }
