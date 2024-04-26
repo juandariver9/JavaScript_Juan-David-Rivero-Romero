@@ -1,119 +1,53 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/Dia_9/css/style.css">
 </head>
-  <body>
-    <h1> Información de Star Wars</h1>
-    <label for="CaracterId">Ingresa el número del personaje de Star Wars que deseas visualizar:</label>
-    <input type="number" id="caracterId" value="1" min="1" max="88" ></input>
-    <button onclick="fetchCaratersWars()">Obtener mi Personaje</button>
-    <hr>
-    <div class="accordion" id="accordionPanelsStayOpenExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-              Información General
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-            <div class="accordion-body">
-              <div id="GeneralInf">
-    
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-              Mundo Natal
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              <div id="HomeworldInf">
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-              Peliculas
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              <div id="FilmsInf">
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                Especies
-              </button>
-            </h2>
-            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
-              <div id="SpeciesInf">
-
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                Vehiculos
-              </button>
-            </h2>
-            <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
-              <div id="VehiclesInf">
-
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                Naves
-              </button>
-            </h2>
-            <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div id="StarshipsInf">
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                Información Extra
-              </button>
-            </h2>
-            <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div id="ExtraInf">
-
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
+<body>
+<h1> Información de Star Wars</h1>
+<label for="CaracterId">Ingresa el número del personaje de Star Wars que deseas visualizar:</label>
+<input type="number" id="caracterId" value="1" min="1" max="88"></input>
+<button onclick="fetchCaratersWars()">Obtener mi Personaje</button>
+<hr>
+<table class="table table-striped table-dark">
+    <tbody>
+        <tr>
+            <th scope="row">Información General</th>
+            <td id="GeneralInf"></td>
+        </tr>
+        <tr>
+            <th scope="row">Mundo Natal</th>
+            <td id="HomeworldInf"></td>
+        </tr>
+        <tr>
+            <th scope="row">Películas</th>
+            <td id="FilmsInf"></td>
+        </tr>
+        <tr>
+            <th scope="row">Especies</th>
+            <td id="SpeciesInf"></td>
+        </tr>
+        <tr>
+            <th scope="row">Vehículos</th>
+            <td id="VehiclesInf"></td>
+        </tr>
+        <tr>
+            <th scope="row">Naves</th>
+            <td id="StarshipsInf"></td>
+        </tr>
+        <tr>
+            <th scope="row">Información Extra</th>
+            <td id="ExtraInf"></td>
+        </tr>
+    </tbody>
+</table>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="/Dia_9/js/script.js">
-
-    </script>
-  </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="/Dia_9/js/script.js"></script>
+</body>
 </html>
