@@ -3,6 +3,7 @@
 
 body {
     background-image: url(/Dia_9/img/Star-Wars.jpg);
+    background-attachment: fixed;
 }
 
 h1, label {
