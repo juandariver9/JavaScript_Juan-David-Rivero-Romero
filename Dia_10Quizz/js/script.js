@@ -7,11 +7,11 @@ function fetchCaratersPokemon() {
 }
 
 function fetchPokemon(url) {
-    fetch(url)
-        .then(response => response.json())
+    fetch(url) // <-- Hace la respectiva busqueda
+        .then(response => response.json()) // <-- si la encuentra lo convierte en json y luego la pasa a mostrar
         .then(data => {
-            displayPokemon(data);
-            currentPokemonId = data.id;
+            displayPokemon(data); // ACAAAAAAA
+            currentPokemonId = data.id; 
         })
         .catch(error => console.error('Error:', error));
 }
