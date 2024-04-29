@@ -1,9 +1,19 @@
+@font-face {
+  font-family: bunken;
+  src: url('../font/BunkenTechSansPro-Book.ttf');
+}
+
+
+
 #myBtn {
     display: none;
 }
 
 * {
     margin: 0;
+    font-family: bunken;
+    font-weight: bold;
+    
 }
 
 body {
@@ -13,10 +23,14 @@ body {
 
 #pokedex {
     position:absolute;
+    width: 30vw;
+    height: auto;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
+
 
 
 /*BOTON PREVIEW Y NEXT*/
@@ -93,7 +107,7 @@ button {
 
 /*Input*/
 .input {
-    --input-focus: #2d8cf0;
+    --input-focus: #323232;
     --font-color: #323232;
     --font-color-sub: #666;
     --bg-color: #fff;
@@ -119,4 +133,40 @@ button {
   .input:focus {
     border: 2px solid var(--input-focus);
   }
+
+  .input {
+    position: absolute;
+    left: 49vw; 
+    top: 70vh;
+    transform: translate(-50%, -50%);
+    width: 20vw; 
+  }
 /*-------------------------------------*/
+
+#preview, #next {
+  position: absolute;
+  top: 82vh; 
+}
+
+#preview {
+  left: 38.5vw; 
+}
+
+#next {
+  left: 50vw; 
+}
+
+#id, #name {
+  position: absolute; 
+  top: 57vh;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+
+#id {
+  left: 43vw;
+}
+
+#name {
+  left: 53vw;
+}
