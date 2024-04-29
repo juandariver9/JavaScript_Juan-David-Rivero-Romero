@@ -38,3 +38,15 @@ function fetchCaratersNext() {
     fetchPokemon(url);
 }
 
+
+document.addEventListener("keydown", function(event) {
+    if (event.keyCode === 37) { // Flecha izquierda
+      event.preventDefault();
+      document.getElementById("preview").click();
+    } else if (event.keyCode === 39) { // Flecha derecha
+      event.preventDefault();
+      document.getElementById("next").click();
+    }
+  });
+  
+
