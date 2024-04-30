@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Dia_11/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+<div class="container">
+    <button id="startButton" onclick="startGame()">EMPEZAR</button>
+    <button id="revealButton" onclick="fetchCardFromDeck()" style="display: none;">Revelar predicción</button>
+    <button id="retryButton" onclick="retryGame()" style="display: none;">Intentar denuevo</button>
+    <button id="blackButton" onclick="predict('BLACK')" style="display: none;">Negro</button>
+    <button id="redButton" onclick="predict('RED')" style="display: none;">Rojo</button>
+    <div id="prediction" style="display: none;">RED</div>
+    <div id="cardContainer" style="position: relative;"></div> 
+
+</div>
+
+</body>
+<script src="/Dia_11/js/script.js"></script>
+</html>

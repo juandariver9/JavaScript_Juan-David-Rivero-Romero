@@ -1,0 +1,20 @@
+.container {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    align-self: center;
+    justify-self: c;
+}
+
+
+button {
+    width: 300px;
+    height: 100px;
+}
+
+body {
+    background-image: url(/Dia_11/storage/img/fondo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
