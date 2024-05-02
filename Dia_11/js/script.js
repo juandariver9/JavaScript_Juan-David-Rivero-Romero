@@ -4,12 +4,13 @@ let remainingCards = 52;
 let correctPredictions = 0; // Contador de predicciones correctas
 
 function startGame() { // <-- Se prepara pa iniciar
+    document.getElementById('back').style.display = 'block'; 
     document.getElementById('startButton').style.display = 'none'; 
     document.getElementById('revealButton').style.display = 'block'; 
     document.getElementById('retryButton').style.display = 'none'; 
     document.getElementById('blackButton').style.display = 'block';
     document.getElementById('redButton').style.display = 'block'; 
-    document.getElementById('prediction').style.display = 'block'; 
+    document.getElementById('prediction').style.display = 'none'; 
     document.getElementById('cardContainer').innerHTML = ''; 
     document.getElementById('cantPredict').innerText = correctPredictions;
     fetchDeckId();
@@ -96,6 +97,7 @@ function endGame() {
 }
 
 function retryGame() {
+    document.getElementById('back').style.display = 'none'; 
     document.getElementById('startButton').style.display = 'block';
     document.getElementById('retryButton').style.display = 'none'; 
     document.getElementById('blackButton').style.display = 'none';

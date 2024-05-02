@@ -1,3 +1,13 @@
+@font-face {
+    font-family: poker;
+    src: url(/Dia_11/storage/font/Poker.ttf);
+}
+
+*{
+    margin: 0;
+}
+
+
 .container {
     align-items: center;
     align-content: center;
@@ -21,9 +31,9 @@ body {
 }
 
 #back {
+    display: none;
     position: absolute;
     left: 30%;
-    top: 52%;
     width: 15vw;
 }
 
@@ -31,4 +41,126 @@ body {
     position: absolute;
     left: 49.8%;
     width: 15vw;
+}
+
+/*BOTON*/
+
+button {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #075010;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #FF0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+  }
+  
+  button:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #FF0072;
+    z-index: -1;
+  }
+  
+  button:hover, button:focus {
+    color: white;
+  }
+  
+  button:hover:before, button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  
+  button:active {
+    transform: scale(0.9);
+  }
+
+/**/
+
+/* Botones con nombres de color */
+#blackButton {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    border: 3px solid #075010;
+    color: black; 
+}
+#blackButton:before {
+    background-color: black;
+}
+#blackButton:hover, #blackButton:focus {
+    color: white;
+}
+
+
+  
+#redButton {
+    position: absolute;
+    left: 30%;
+    bottom: 5%;
+    border: 3px solid #075010;
+    color: red; 
+}
+  
+#redButton:before {
+    background-color: red; 
+}
+  
+#redButton:hover,
+#redButton:focus {
+    color: white;
+}
+  
+  
+#startButton {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#revealButton {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+#retryButton {
+    position: absolute;
+    left: 40%;
+    bottom: 15%;
+    transform: translate(0%, -50%);
+}
+
+#cantPredict{
+    position: absolute;
+    right: 0%;
+    top: 10%;
+    font-family: poker;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: black;
+    font-weight: bold;
+}
+
+#barrita {
+    width: 100vw;
+    height: 20vh;
 }
