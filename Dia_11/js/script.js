@@ -1,6 +1,7 @@
 let deckId;
 let zIndexCounter = 0; 
 let remainingCards = 52; 
+let correctPredictions = 0; // Contador de predicciones correctas
 
 function startGame() { // <-- Se prepara pa iniciar
     document.getElementById('startButton').style.display = 'none'; 
@@ -8,7 +9,9 @@ function startGame() { // <-- Se prepara pa iniciar
     document.getElementById('retryButton').style.display = 'none'; 
     document.getElementById('blackButton').style.display = 'block';
     document.getElementById('redButton').style.display = 'block'; 
+    document.getElementById('prediction').style.display = 'block'; 
     document.getElementById('cardContainer').innerHTML = ''; 
+    document.getElementById('cantPredict').innerText = correctPredictions;
     fetchDeckId();
 }
 
@@ -57,6 +60,8 @@ function fetchCardFromDeck() {
                 console.log("Color:", color);
                 if (prediction === color) {
                     console.log("Predicción correcta. El juego continúa.");
+                    correctPredictions++; // Incrementar contador de predicciones correctas
+                    document.getElementById('cantPredict').innerText ="Aciertos: " + correctPredictions; // Actualizar contador
                 } else {
                     console.log("Predicción incorrecta. El juego ha terminado.");
                     endGame(); // Finalizar el juego si la predicción es incorrecta
@@ -79,9 +84,7 @@ function fetchCardFromDeck() {
 function displayCard(imageUrl) {
     let cardImage = document.createElement('img');
     cardImage.src = imageUrl;
-    cardImage.style.position = 'absolute';
-    cardImage.style.top = '0';
-    cardImage.style.left = '0';
+    cardImage.classList.add('card-image'); // Agregar la clase card-image
     cardImage.style.zIndex = zIndexCounter++;
     let cardContainer = document.getElementById('cardContainer');
     cardContainer.appendChild(cardImage);
@@ -95,7 +98,11 @@ function endGame() {
 function retryGame() {
     document.getElementById('startButton').style.display = 'block';
     document.getElementById('retryButton').style.display = 'none'; 
+    document.getElementById('blackButton').style.display = 'none';
+    document.getElementById('redButton').style.display = 'none'; 
+    document.getElementById('prediction').style.display = 'none'; 
     document.getElementById('cardContainer').innerHTML = ''; 
+    document.getElementById('cantPredict').innerText = correctPredictions = 0; // Reiniciar contador
     remainingCards = 52; 
 }
 
