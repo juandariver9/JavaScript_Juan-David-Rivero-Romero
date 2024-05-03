@@ -1,0 +1,19 @@
+
+*{
+    margin: 0;
+}
+.container-mio {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, 0%);
+    border: 2px solid #bcbcbc;
+    border-radius: 8px;
+    padding: 10px;
+    width: 50vw;
+    height: auto;
+}
+
+#infHero, #deleteButton, #updateButton {
+    display: none;
+}
