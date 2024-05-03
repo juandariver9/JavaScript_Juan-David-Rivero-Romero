@@ -1,0 +1,38 @@
+function BuscarEnElLink(){
+    let xhr = new XMLHttpRequest();
+    let caracterID = document.getElementById('caracterId').value;
+    console.log(caracterID);
+    let url = `https://swapi.py4e.com/api/people/${caracterID}/`
+    xhr.open('GET',url,true);
+    xhr.onreadystatechange = function(){
+        if (this.readyState === 4 && this.status === 200){
+            let response = JSON.parse(this.responseText);
+            console.log(response);
+            DisplayGeneralInfo(response);
+        }
+        else if( this.readyState == 4 ){
+            console.log('Error:',this.statusText);
+        }
+    };
+    xhr.send();
+}
+
+function DisplayGeneralInfo(data){
+    let generalInfo = document.getElementById("GeneralInf");
+    
+    if (data.response === "error") {
+        generalInfo.innerHTML = `<p>Error: ${data.error}</p>`;
+    } 
+    else {
+        generalInfo.innerHTML = `
+        <p>Nombre: ${data.name}</p>
+    }
+}
+
+--------------------------------------------
+
+let prediction = document.getElementById('prediction').innerText; // Obtener lo que dice en el item
+
+let image = document.createElement('img'); // Crear elemento
+
+document.getElementById('revealButton').style.display = 'none'; // Cambiar el style desde js
