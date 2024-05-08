@@ -35,6 +35,9 @@ function DisplayGeneralInfo(data){
 
     } 
     else {
+
+        let birthday = data.results[0].dob.date
+        let newbirthday = birthday.slice(0,10).replaceAll("-","/")
         
         avatar.innerHTML = `
         <img class="card__avatar" src="${data.results[0].picture.large}" alt="xd">
@@ -46,7 +49,7 @@ function DisplayGeneralInfo(data){
         <p style="color: #999999;">My email address is</p><p>${data.results[0].email}</p>
         `
         ccalendar.innerHTML = `
-        <p style="color: #999999;">My birthday is</p><p>${data.results[0].dob.date}</p>
+        <p style="color: #999999;">My birthday is</p><p>${newbirthday}</p>
         `
         mmap.innerHTML = `
         <p style="color: #999999;">My address is</p><p>${data.results[0].location.street.number} ${data.results[0].location.street.name}</p>
